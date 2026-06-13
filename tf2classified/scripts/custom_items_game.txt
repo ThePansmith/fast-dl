@@ -1,0 +1,749 @@
+#base "items_game.txt"
+
+"items_game"
+{
+	"items"
+	{
+					// New shit
+		"1178"
+		{
+			"name"					"The Dragon's Fury"
+			"prefab"				"paintkit_base"
+			"item_class"			"tf_weapon_rocketlauncher_fireball"
+			"show_in_armory"		"1"
+			"item_type_name"		"#TF_Weapon_FireballLauncher"
+			"particle_suffix"		"dragons_fury"
+			"propername"			"1"
+			"item_name"				"#TF_Weapon_DragonsFury"
+			"item_description"		"Ooooh, lamb kabab!"
+			"item_slot"				"primary"
+			"anim_slot"				"primary"
+			"item_logname"			"dragons_fury"
+			"item_iconname"			"dragons_fury"
+			"image_inventory"		"backpack/weapons/c_models/c_flameball/c_flameball"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"model_player"			"models/weapons/c_models/c_flameball/c_flameball.mdl"
+			"attach_to_hands"		"1"
+
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+
+			"static_attrs"
+			{
+				"min_viewmodel_offset"				"10 -3 -10"
+				"item_meter_charge_type"			"1"
+				"item_meter_charge_rate"			"0.8"
+				"meter_label"						"#TF_Pressure"
+				"hidden primary max ammo bonus"		"0.2"
+				"airblast cost scale hidden"		"0.25"
+				"dragons fury neutral properties"	"1"
+				"extinguish restores health"		"20"
+				"dragons fury positive properties"	"1"
+				"dragons fury negative properties"	"1"
+			}
+
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Airstrike.AltFire"
+				"sound_special1"		"Weapon_Airstrike.Explosion"
+
+				"animation_replacement"
+				{
+					"ACT_VM_PRIMARYATTACK"					"ACT_PRIMARY_VM_PRIMARYATTACK_3"
+
+					"ACT_PRIMARY_VM_INSPECT_START"			"ACT_ITEM4_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"			"ACT_ITEM4_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"			"ACT_ITEM4_VM_INSPECT_END"
+
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"			"ACT_MP_ATTACK_CROUCH_PRIMARY_ALT"
+					"ACT_MP_ATTACK_STAND_PRIMARY"			"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"			"ACT_MP_ATTACK_SWIM_PRIMARY_ALT"
+
+					"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE"	"ACT_MP_ATTACK_CROUCH_PRIMARY_ALT"
+					"ACT_MP_ATTACK_STAND_SECONDARYFIRE"		"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"		"ACT_MP_ATTACK_SWIM_PRIMARY_ALT"
+				}
+			}
+
+			"mouse_pressed_sound"	"ui/item_flamethrower_pickup.wav"
+			"drop_sound"			"ui/item_heavy_gun_drop.wav"
+		}
+
+		"6002"
+		{
+			"name"					"offensive wrench prototype"
+			"prefab"				"valve"
+			"item_class"			"tf_weapon_robot_arm"
+			"show_in_armory"		"1"
+			"item_type_name"		"Handheld Welder"
+			"item_name"				"offensive wrench prototype"
+			"item_description"		"I got plans for anything."
+			"item_slot"				"melee"
+			"equip_region"			"arms"
+			"anim_slot"				"item2"
+			"propername"			"1"
+			"item_logname"			"robot_arm"
+			"item_iconname"			"robot_arm_kill"
+			"image_inventory"		"backpack/weapons/gunslinger"
+			"extra_wearable" "models/player/items/engineer/mining_hat.mdl"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"attach_to_hands"		"1"
+			"disable_backpack_inspect"	"1"
+
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 -2 -7"
+			}
+
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+
+			"attributes"
+			{
+				"alt buildings"
+				{
+					"attribute_class"	"alt_buildings"
+					"value"				"1"
+				}
+
+				"hidden separator"			"1"
+
+				"engy sentry turn rate penalty"
+				{
+					"attribute_class"	"mult_sentry_turnrate"
+					"value"				"1.1"
+				}
+
+				"mod sentrygun cost"
+				{
+					"attribute_class"	"mod_sentrygun_cost"
+					"value"				"0.77"
+				}
+
+				"engineer sentry build rate multiplier"
+				{
+					"attribute_class"	"sentry_build_rate_multiplier"
+					"value"				"1.75"
+				}
+
+				"engy sentry fire rate increased"
+				{
+					"attribute_class"	"mult_sentry_firerate"
+					"value"				"0.85"
+				}
+
+				"engy sentry damage bonus"
+				{
+					"attribute_class"	"mult_engy_sentry_damage"
+					"value"				"0.75"
+				}
+
+				"engy sentry knockback penalty"
+				{
+					"attribute_class"	"mult_sentry_knockback"
+					"value"				"0.5"
+				}
+
+				"mod dispenser cost"
+				{
+					"attribute_class"	"mod_dispenser_cost"
+					"value"				"0.75"
+				}
+
+				"engy dispenser radius increased"
+				{
+					"attribute_class"	"mult_dispenser_radius"
+					"value"				"2.5"
+				}
+
+				"mult dispenser rate"
+				{
+					"attribute_class"	"mult_dispenser_rate"
+					"value"				"0.5"
+				}
+			}
+
+			"tags"
+			{
+				"bots_cant_use"		"1"
+			}
+
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"rightarm"	"1"
+				}
+
+				"animation_replacement"
+				{
+					"ACT_MELEE_VM_INSPECT_START"	"ACT_ITEM2_VM_INSPECT_START"
+					"ACT_MELEE_VM_INSPECT_IDLE"		"ACT_ITEM2_VM_INSPECT_IDLE"
+					"ACT_MELEE_VM_INSPECT_END"		"ACT_ITEM2_VM_INSPECT_END"
+				}
+			}
+
+			"mouse_pressed_sound"	"ui/item_robot_arm_pickup.wav"
+			"drop_sound"			"ui/item_robot_arm_drop.wav"
+		}
+
+		"226"
+		{
+			"name"					"The Buff Banner"
+			"item_class"			"tf_weapon_buff_item"
+			"show_in_armory"		"1"
+			"item_type_name"		"#TF_Weapon_Battle_Banner"
+			"item_name"				"Buff Banner"
+			"item_description"		"How about motivating those lazy sons of bitches to put on their war face and fight!"
+			"item_slot"				"secondary"
+			"equip_region"			"back"
+			"anim_slot"				"melee"
+			"propername"			"1"
+			"image_inventory"		"backpack/weapons/c_models/c_buffpack/c_buffpack"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"model_player"			"models/weapons/c_models/c_bugle/c_bugle.mdl"
+			"attach_to_hands"		"1"
+			"extra_wearable"		"models/weapons/c_models/c_buffpack/c_buffpack.mdl"
+
+			"used_by_classes"
+			{
+				"soldier"	"1"
+			}
+
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 -2 -5"
+			}
+
+			"attributes"
+			{
+				"mod soldier buff type"
+				{
+					"attribute_class"	"set_buff_type"
+					"value"				"1"
+				}
+
+				"mod set banner cond"
+				{
+					"attribute_class"	"mod_set_banner_cond"
+					"value"				"16" // for now, kinda want a haste/minicrits boost?
+				}
+
+				"maxammo primary increased"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"2.0"
+				}
+
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"				"1"
+				}
+			}
+
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_MP_ATTACK_STAND_MELEE_SECONDARY"	"ACT_MP_ATTACK_STAND_ITEM1_SECONDARY"
+					"ACT_MP_ATTACK_CROUCH_MELEE_SECONDARY"	"ACT_MP_ATTACK_STAND_ITEM1_SECONDARY"
+					"ACT_SECONDARY_VM_INSPECT_START"		"ACT_ITEM1_VM_INSPECT_START"
+					"ACT_SECONDARY_VM_INSPECT_IDLE"			"ACT_ITEM1_VM_INSPECT_IDLE"
+					"ACT_SECONDARY_VM_INSPECT_END"			"ACT_ITEM1_VM_INSPECT_END"
+				}
+			}
+
+			"mouse_pressed_sound"	"ui/item_pack_pickup.wav"
+			"drop_sound"			"ui/item_pack_drop.wav"
+		}
+
+		"7001" // Widowmaker
+		{
+			"name"					"Upgrade Shotgun A"
+			"item_class"			"tf_weapon_shotgun_primary"
+			"item_type_name"		"Shotgun"
+			"item_logname"			"widowmaker"
+			"item_iconname"			"widowmaker"
+			"item_name"				"Upgrade shotgun prototype A"
+			"item_description"		"WIP"
+			"item_slot"				"primary"
+			"show_in_armory"		"1"
+			"propername"			"1"
+			"image_inventory"		"backpack/weapons/c_models/c_repair_shotgun/c_repair_shotgun"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"model_player"			"models/weapons/c_models/c_repair_shotgun/c_repair_shotgun.mdl"
+			"attach_to_hands"		"1"
+
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -9"
+			}
+
+			"attributes"
+			{
+				"shots upgrade buildings"
+				{
+					"attribute_class"	"shots_upgrade_buildings"
+					"value"				"1"
+				}
+
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.5"
+				}
+
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"0.75"
+				}
+
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"				"1.11"
+				}
+
+				"fixed_shot_pattern"
+				{
+					"attribute_class"	"fixed_shot_pattern"
+					"value"				"1"
+				}
+
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"0.95"
+				}
+
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"				"0.34"
+				}
+			}
+
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_WidowMaker.Single"
+				"sound_burst"			"Weapon_WidowMaker.SingleCrit"
+				"sound_empty"			"Weapon_WidowMaker.Empty"
+
+				"animation_replacemeant"
+				{
+					"ACT_VM_PRIMARYATTACK"			"ACT_VM_PRIMARYATTACK_SPECIAL"
+					"ACT_PRIMARY_VM_INSPECT_START"	"ACT_PRIMARY_ALT1_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"	"ACT_PRIMARY_ALT1_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"	"ACT_PRIMARY_ALT1_VM_INSPECT_END"
+				}
+			}
+
+			"mouse_pressed_sound"	"ui/item_medium_gun_pickup.wav"
+			"drop_sound"			"ui/item_medium_gun_drop.wav"
+		}
+
+		"7002" // Widowmaker
+		{
+			"name"					"Upgrade Shotgun prototype B"
+			"item_class"			"tf_weapon_grenadelauncher"
+			"item_type_name"		"Slag Launcher"
+			"item_logname"			"widowmaker"
+			"item_iconname"			"widowmaker"
+			"item_name"				"Slag launcher"
+			"item_description"		"Nowhere near as spicy as my momma's chili.
+			WIP"
+			"item_slot"				"primary"
+			"show_in_armory"		"1"
+			"propername"			"1"
+			"image_inventory"		"backpack/weapons/c_models/c_slaggun/c_slaggun"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"model_player" "models/weapons/c_models/c_slaggun/c_slaggun.mdl"
+			"attach_to_hands"		"1"
+
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -9"
+				"hide ammo hud"                         "1"
+			}
+
+			"attributes"
+			{
+
+				"projectile heals buildings"
+				{
+					"attribute_class" "projectile_heals_buildings"
+					"value" "60"
+				}
+				"reload metal cost"
+				{
+					"attribute_class" "reload_metal_cost"
+					"value" "25"
+				}
+
+				
+				"hidden separator"			"1"
+				//"override projectile type"
+				//{
+				//	"attribute_class" "override_projectile_type"
+				//	"value" "17"
+				//}
+				"mark for death on building pickup"
+				{
+					"attribute_class" "mark_for_death_on_building_pickup"
+					"value" "1"
+				}
+				"Projectile speed increased"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"	"1.5"
+				}
+				"sticky air burst mode"
+				{
+					"attribute_class"	"set_detonate_mode"
+					"value"	"3"
+				}
+				"blast radius decreased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"				"0.3"
+				}
+				"maxammo primary reduced"
+				{
+					"attribute_class" "mult_maxammo_primary"
+					"value" "0.5"
+				}
+				"clip size penalty"
+				{
+					"attribute_class" "mult_clipsize"
+					"value" "0.34"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"0.85"
+				}
+				"energy weapon no ammo"
+				{
+					"attribute_class"	"energy_weapon_no_ammo"
+					"value" "1"
+				}
+				"self dmg push force increased"			{"value"	"0.25"}	
+			}
+
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_WidowMaker.Single"
+				"sound_burst"			"Weapon_WidowMaker.SingleCrit"
+				"sound_empty"			"Weapon_WidowMaker.Empty"
+
+				"animation_replacement"
+				{
+					"ACT_VM_IDLE"	"ACT_SECONDARY2_VM_IDLE"
+					"ACT_VM_DRAW"	"ACT_SECONDARY2_VM_DRAW"
+					"ACT_VM_PRIMARYATTACK"	"ACT_SECONDARY2_VM_PRIMARYATTACK"
+					"ACT_RELOAD_START"	"ACT_SECONDARY2_RELOAD_START"
+					"ACT_RELOAD_FINISH"	"ACT_SECONDARY2_RELOAD_FINISH"
+					"ACT_VM_RELOAD"	"ACT_SECONDARY2_VM_RELOAD"
+					"ACT_MP_RELOAD_STAND"	"ACT_MP_RELOAD_STAND_SECONDARY2"
+					"ACT_MP_RELOAD_STAND_LOOP"	"ACT_MP_RELOAD_STAND_SECONDARY2_LOOP"
+					"ACT_MP_RELOAD_STAND_END"	"ACT_MP_RELOAD_STAND_SECONDARY2_END"
+					"ACT_MP_RELOAD_CROUCH"	"ACT_MP_RELOAD_CROUCH_SECONDARY2"
+					"ACT_MP_RELOAD_CROUCH_LOOP"	"ACT_MP_RELOAD_CROUCH_SECONDARY2_LOOP"
+					"ACT_MP_RELOAD_CROUCH_END"	"ACT_MP_RELOAD_CROUCH_SECONDARY2_END"
+					"ACT_MP_RELOAD_SWIM"	"ACT_MP_RELOAD_SWIM_SECONDARY2"
+					"ACT_MP_RELOAD_SWIM_LOOP"	"ACT_MP_RELOAD_SWIM_SECONDARY2_LOOP"
+					"ACT_MP_RELOAD_SWIM_END"	"ACT_MP_RELOAD_SWIM_SECONDARY2_END"
+					"ACT_MP_RELOAD_AIRWALK"	"ACT_MP_RELOAD_AIRWALK_SECONDARY2"
+					"ACT_MP_RELOAD_AIRWALK_LOOP"	"ACT_MP_RELOAD_AIRWALK_SECONDARY2_LOOP"
+					"ACT_MP_RELOAD_AIRWALK_END"	"ACT_MP_RELOAD_AIRWALK_SECONDARY2_END"
+					"ACT_PRIMARY_VM_INSPECT_START"	"ACT_SECONDARY_ALT1_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"	"ACT_SECONDARY_ALT1_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"	"ACT_SECONDARY_ALT1_VM_INSPECT_END"
+				}
+			}
+
+			"mouse_pressed_sound"	"ui/item_medium_gun_pickup.wav"
+			"drop_sound"			"ui/item_medium_gun_drop.wav"
+		}
+		"7003" // Spy EMP
+		{
+			"name"					"EMP"
+			"item_class"			"tf_weapon_cannon"
+			"item_type_name"		"Electromagnetic Pulse Generator"
+			"item_logname"			"emp"
+			"item_iconname"			"emp"
+			"item_name"				"EMP"
+			"item_description"		"WIP"
+			"item_slot"				"building"
+			"show_in_armory"		"1"
+			"propername"			"1"
+			"image_inventory"		"backpack/workshop_partner/weapons/c_models/c_sd_sapper/c_sd_sapper"
+			"image_inventory_size_w"	"128"
+			"image_inventory_size_h"	"82"
+			"model_player"			"models/workshop_partner/weapons/c_models/c_sd_sapper/c_sd_sapper.mdl"
+			"attach_to_hands"		"1"
+
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -9"
+			}
+
+			"attributes"
+			{
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.5"
+				}
+				
+				"explosion stuns buildings"
+				{
+					"attribute_class"	"explosion_stuns_buildings"
+					"value"				"1"
+				}
+			}
+		}
+						// Rebalanced shit
+		"2003" // Hunting revolver (minus the hp buff)
+		{
+			"name"				"Hunting Revolver"
+			"item_name"			"#TF_Weapon_HuntingRevolver"
+			"item_type_name"	"#TF_Weapon_SniperRifle"
+			"item_description"	"#TF_Weapon_HuntingRevolver_Desc"
+			"item_quality"		"normal"
+
+			"item_class"	"tf2c_weapon_hunting_revolver"
+			"item_slot"		"primary"
+			"used_by_classes"
+			{
+				"Sniper"	"1"
+			}
+			"attributes"
+			{
+				"sniper zoom penalty"
+				{
+					"attribute_class"	"mult_zoom_fov"
+					"value"				"0.5"
+				}
+				"longer damage falloff distance"
+				{
+					"attribute_class"	"mult_falloff_distance"
+					"value"				"2.0"
+				}
+			}
+
+			"model_world"				"models/weapons/w_models/w_revrifle_sniper.mdl"
+			"model_player"				"models/weapons/v_models/v_revrifle_sniper.mdl"
+			"attach_to_hands"			"2"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -10"
+				"class select override vcd"	"class_select_revrifle"
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_MP_ATTACK_STAND_PRIMARY_DEPLOYED"	"ACT_MP_ATTACK_STAND_PRIMARY_DEPLOYED_ALT"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY_DEPLOYED"	"ACT_MP_ATTACK_CROUCH_PRIMARY_DEPLOYED_ALT"
+					"ACT_MP_ATTACK_SWIM_PRIMARY_DEPLOYED"	"ACT_MP_ATTACK_SWIM_PRIMARY_DEPLOYED_ALT"
+					
+					"ACT_MP_RELOAD_STAND_PRIMARY_DEPLOYED"	"ACT_MP_RELOAD_STAND_PRIMARY_DEPLOYED_ALT"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY_DEPLOYED"	"ACT_MP_RELOAD_CROUCH_PRIMARY_DEPLOYED_ALT"
+					"ACT_MP_RELOAD_SWIM_PRIMARY_DEPLOYED"	"ACT_MP_RELOAD_SWIM_PRIMARY_DEPLOYED_ALT"
+					
+					"ACT_MP_ATTACK_STAND_PRIMARY"	"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"	"ACT_MP_ATTACK_CROUCH_PRIMARY_ALT"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"	"ACT_MP_ATTACK_SWIM_PRIMARY_ALT"
+					
+					"ACT_MP_RELOAD_STAND_PRIMARY"	"ACT_MP_RELOAD_STAND_PRIMARY_ALT"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY"	"ACT_MP_RELOAD_CROUCH_PRIMARY_ALT"
+					"ACT_MP_RELOAD_SWIM_PRIMARY"	"ACT_MP_RELOAD_SWIM_PRIMARY_ALT"
+				}
+			}
+			"item_logname"	"hunterrifle"
+			"item_iconname"	"hunterrifle"
+			
+			"image_inventory"		"backpack/weapons/w_models/w_revrifle"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"			"ui/item_heavy_gun_drop.wav"
+		}
+		"52" // Moving HP buff over to The Huntsman
+		{
+			"name"				"The Huntsman"
+			"item_name"			"#TF_Weapon_Huntsman"
+			"item_type_name"	"#TF_Weapon_Bow"
+			"item_description"	"#TF_Weapon_Huntsman_Desc"
+			"item_quality"		"normal"
+			"propername"		"1"
+
+			"item_class"	"tf_weapon_compound_bow"
+			"item_slot"		"primary"
+			"used_by_classes"
+			{
+				"Sniper"	"1"
+			}
+			"attributes"
+			{
+				"max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"				"25"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value"				"1"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"				"1"
+				}
+			}
+
+			"model_player"		"models/weapons/v_models/v_bow.mdl"
+			"model_world"		"models/weapons/w_models/w_bow.mdl"
+			"anim_slot"			"item2"
+			"attach_to_hands"	"2"
+			"extra_wearable"	"models/player/items/sniper_arrows.mdl"
+
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 -4 -10"
+				"class select override vcd"		"class_select_huntsman"
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_PRIMARY_VM_INSPECT_START"	"ACT_ITEM2_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"	"ACT_ITEM2_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"	"ACT_ITEM2_VM_INSPECT_END"
+				}
+			}
+			"item_iconname"		"huntsman"
+
+			"image_inventory"		"backpack/weapons/w_models/w_bow"
+			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
+			"drop_sound"			"ui/item_wood_pole_drop.wav"
+		}
+	}
+
+	"attributes"
+	{
+		"6000"
+		{
+			"name"					"mult teleporter recharge rate"
+			"attribute_class"		"mult_teleporter_recharge_rate"
+			"description_string"	"+%s1% faster teleporter recharge speed"
+			"description_format"	"value_is_percentage"
+			"effect_type"			"positive"
+		}
+
+		"6001"
+		{
+			"name"					"mult dispenser rate"
+			"attribute_class"		"mult_dispenser_rate"
+			"description_string"	"+%s1% faster dispenser rate"
+			"description_format"	"value_is_percentage"
+			"effect_type"			"positive"
+		}
+
+		"6002"
+		{
+			"name"					"alt buildings"
+			"attribute_class"		"alt_buildings"
+			"description_format"	"value_is_additive"
+			"description_string"	"Implements alternative sentry and dispenser designs
+			Alternative designs construct faster and cheaper, with modified properties"
+			"effect_type"			"neutral"
+			"stored_as_integer"		"0"
+		}
+
+		"6003"
+		{
+			"name"					"explosion stuns buildings"
+			"attribute_class"		"explosion_stuns_buildings"
+			"description_string"	"Explosion disables buildings"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+			"stored_as_integer"		"0"
+		}
+
+		"6004"
+		{
+			"name"					"maxammo grenade1 additive"
+			"attribute_class"		"mult_maxammo_grenades1"
+			"description_format"	"value_is_additive"
+			"hidden"				"1"
+			"effect_type"			"negative"
+			"stored_as_integer"		"0"
+		}
+
+		"6005"
+		{
+			"name"					"shots upgrade buildings"
+			"attribute_class"		"shots_upgrade_buildings"
+			"description_format"	"value_is_additive"
+			"description_string"	"Bullets upgrade buildings at a 1:3 bullet to metal ratio"
+			"effect_type"			"positive"
+			"stored_as_integer"		"0"
+		}
+
+		"6006"
+		{
+			"name"					"reload metal cost"
+			"attribute_class"		"reload_metal_cost"
+			"description_format"	"value_is_additive"
+			"description_string"	"-%s1 metal to reload slag"
+			"effect_type"			"negative"
+		}
+
+		"6007"
+		{
+			"name"					"projectile heals buildings"
+			"attribute_class"		"projectile_heals_buildings"
+			"description_format"	"value_is_additive"
+			"description_string"	"Slag heals buildings"
+			"effect_type"			"positive"
+			"stored_as_integer"		"0"
+		}
+
+		"6008"
+		{
+			"name"					"slag explain"
+			"attribute_class"		"slag_explain"
+			"description_format"	"value_is_additive"
+			"description_string"	"Launches balls of molten metal"
+			"effect_type"			"neutral"
+			"stored_as_integer"		"0"
+		}
+	}
+}
